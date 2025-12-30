@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="Nandeesh Bhatrai - Software Engineer | Computer Science Student at IIT Goa">
     <title>Nandeesh Bhatrai | Software Engineer</title>
     <link rel="stylesheet" href="styles.css">
@@ -21,9 +21,15 @@
                     <li><a href="#skills" class="nav-link">Skills</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
-                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
-                    <span class="theme-icon">🌙</span>
-                </button>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                        <span class="icon-hamburger" aria-hidden="true">≡</span>
+                        <span class="icon-close" aria-hidden="true">×</span>
+                    </button>
+                </div>
             </div>
         </nav>
     </header>
@@ -210,12 +216,6 @@
             </div>
         </section>
     </main>
-
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <p class="footer-text">&copy; 2025 Nandeesh Bhatrai. All rights reserved.</p>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 
