@@ -27,10 +27,24 @@ function updateThemeIcon(icon, theme) {
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize theme
     initTheme();
+
+    // Mobile nav toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', function () {
+            const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+            const newState = !isOpen;
+            navToggle.setAttribute('aria-expanded', String(newState));
+            navToggle.classList.toggle('open', newState);
+            navLinks.classList.toggle('open', newState);
+        });
+    }
     // Handle navigation link clicks
-    const navLinks = document.querySelectorAll('.nav-link, .btn[href^="#"]');
+    const scrollLinks = document.querySelectorAll('.nav-link, .btn[href^="#"]');
     
-    navLinks.forEach(link => {
+    scrollLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
             
